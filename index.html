@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> my profile</title>
+    <style>
+        body{
+            background-color : greenyellow;
+            color : white;
+            font-family:  Arial;
+            text-align: center;
+            padding-top: 50px;
+        
+        }
+        img{
+            width: 200px;
+            border-radius: 100%;
+            border: 5px solid white;
+        }
+        .card{
+            background: rgb(56, 164, 236);
+            width: 400px;
+            margin: auto;
+            padding: 90px;
+            border-radius: 90px;
+        }
+        h1{
+            color :cyan;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+        
+
+            
+        }
+        button:hover{
+            background:white;
+
+        }
+        </style>
+
+</head>
+<body>
+    <div class="card">
+        <img src="https://cdn.discordapp.com/attachments/1506359994340212807/1506360057124618371/image.png?ex=6a0dfaa0&is=6a0ca920&hm=6c62c7cdf85fe5df3e254bfa0f61d9dd0ecde439e7e09f6412b0acc9d10708aa&">
+        <h1 id="name">nigga</h1>
+        <p>อายุ 10 ปี</p>
+        <p id="text">กำลังฝึกเขียนเว็บไซต์</p>
+        <p>ชอบเล่นเกม Roblox</p>
+        <button>ติดต่อสอบถาม</button><p>0871169362</p>
+        <button onclick="hello()">ติดตาม
+        </button>
+        <button onclick="changeText()">เปลี่ยนข้อความ</button><Br>
+        <button onclick="darkMode()"> Dark Mode </button><Br>
+        >
+        <button onclick="ChangeText()">เปลี่ยนชื่อ</button>
+        <script>function changeText(){
+            document.getElementById("text").innerHTML = "ข้อความถูกเปลี่ยนแล้ว";
+        }           
+
+        </script>
+                    <p>สนับนสนุนค่าขนมฟอเรน</p><button>test</button>
+    </div>
+    <script>
+        function hello(){
+            alert("ทดสอบระบบbotton");
+        }
+    </script>
+    <script>
+        function darkMode(){
+            document.body.style.background = "black"
+        }
+    </script>
+    <script>
+        function ChangeText(){
+            document.getElementById("name").innerHTML = "คนดำ";
+
+        }
+    </script>
+    <h2 id="hello">Hello</h2>
+    <button onclick="changeText()">เปลี่ยน
+    </button>
+    <script>
+        function changeText(){
+            document.getElementById("hello").innerHTML = "เปลี่ยนแล้ว"
+        }
+    </script>
+</html>
+    <head>
+        <title>popup Image</title>
+        <style>
+            body{
+                background: #222;
+                text-align: center;
+                padding-top: 100px;
+                font-family: Arial;
+                        }
+                        button{
+                            padding: 15px 25px;
+                            font-size: 18px;
+                            border: none;
+                            border-radius: 10px;
+                            cursor: pointer;
+                        }
+                        #popup{
+                            display: none;
+                            position: fixed;
+                            top:0;
+                            left:0;
+                            width: 100%;
+                            height:100%;
+                            background: rgba(0,0,0,0.8);
+
+                        }
+                        #popup img{
+                            width: 300px;
+                            margin-top: 100px;
+                            border-radius: 20px;
+                    
+                        }
+                            .popup-box{
+                                background:white;
+                                width:300px;
+                                margin:100px auto;
+                                padding:20px;
+                                border-radius:20px;
+                                position:relative;
+                            }
+                            .close{
+                                color:black;
+                                position:absolute;
+                                right:15px;
+                                top: 10px;
+                                font-size: 25px;
+                                cursor:pointer;
+                            }
+        </style>
+    </head>
+    <body>
+        <button onclick="showPopup()">สนับสนุนฟอเรน</button>
+        <div id="popup">
+            <div class="popup-box">
+                <span class="close"
+                onclick="closePopup()">
+                x
+                </span>
+            <!--คิวอาร์โค้ดน้องปอ-->
+            <img
+            src="https://cdn.discordapp.com/attachments/1131576517412007937/1506524263685816362/IMG_20250318_090717_355.jpg?ex=6a0e938e&is=6a0d420e&hm=4bafedfe804c77b93083bf112716073f3584318db26a29e8dfe8a9de180bfb3f&">
+            </div>
+        </div>
+            <script>
+                function showPopup(){
+                    document.getElementById("popup").style.display ="block"
+                }
+                function closePopup(){
+                    document.getElementById("popup").style.display =
+                    "none"
+                }
+            </script>
+            <!-- Music Player -->
+            <div>
+                <label for="songSelect">เลือกเพลง:</label>
+                <select id="songSelect" onchange="changeSong()">
+                    <option value="https://cdn.discordapp.com/attachments/1506359994340212807/1506686669716455666/PURPEECH_-_Fear_Official_MV.mp3?ex=6a0f2ace&is=6a0dd94e&hm=e91758d7551ff0cd405c5cb8d4c4bd6345afcced280384835c31c26d840fcc50&">SoundHelix Song 1</option>
+                    <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">SoundHelix Song 2</option>
+                    <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">SoundHelix Song 3</option>
+                </select>
+            </div>
+            <div>
+                <input type="file" accept="audio/*" onchange="loadLocalSong(event)" />
+            </div>
+            <div>
+                <button onclick="playAudio()">เล่นเพลง</button>
+                <button onclick="stopAudio()">หยุดเพลง</button>
+                <button onclick="decreaseVolume()">ลดเสียง</button>
+                <button onclick="increaseVolume()">เพิ่มเสียง</button>
+            </div>
+            <div>ระดับเสียง: <span id="volumeLabel">50%</span></div>
+            <script>
+                var audio = new Audio(document.getElementById("songSelect").value);
+                audio.volume = 0.5;
+
+                function playAudio(){
+                    audio.play();
+                }
+                function stopAudio(){
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+                function changeSong(){
+                    var select = document.getElementById("songSelect");
+                    audio.src = select.value;
+                    audio.load();
+                    playAudio();
+                }
+                function increaseVolume(){
+                    audio.volume = Math.min(audio.volume + 0.1, 1);
+                    updateVolumeLabel();
+                }
+                function decreaseVolume(){
+                    audio.volume = Math.max(audio.volume - 0.1, 0);
+                    updateVolumeLabel();
+                }
+                function updateVolumeLabel(){
+                    document.getElementById("volumeLabel").textContent = Math.round(audio.volume * 100) + "%";
+                }
+                function loadLocalSong(event){
+                    var file = event.target.files[0];
+                    if (!file) return;
+                    var url = URL.createObjectURL(file);
+                    audio.src = url;
+                    audio.load();
+                    playAudio();
+                }
+                updateVolumeLabel();
+            </script>
+    </body>
+</html>
