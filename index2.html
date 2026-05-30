@@ -1,1 +1,174 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern E-Commerce Store</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        /* อนิเมชันเพิ่มเติมสำหรับ Hover เกรดพรีเมียม */
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
 
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-40 shadow-xs px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold bg-gradient-to-r gold from-indigo-600 to-purple-600 bg-clip-text text-transparent">SHOPCHIC</a>
+        <div class="space-x-6">
+            <a href="#" class="hover:text-indigo-600 transition duration-300">หน้าแรก</a>
+            <a href="#products" class="hover:text-indigo-600 transition duration-300">สินค้า</a>
+            <a href="#" class="hover:text-indigo-600 transition duration-300">ติดต่อเรา</a>
+        </div>
+    </nav>
+
+    <header class="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-950 to-slate-900 text-white py-24 px-6 text-center">
+        <div class="max-w-3xl mx-auto relative z-10">
+            <h1 class="animate__animated animate__fadeInDown text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                ค้นพบสไตล์ที่ <span class="text-yellow-400">ใช่</span> สำหรับคุณ
+            </h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s text-lg text-gray-300 mb-8">
+                รวมสินค้าแฟชั่นและไลฟ์สไตล์ระดับพรีเมียม ช้อปง่ายๆ พร้อมโปรโมชันจัดเต็มส่งท้ายเดือน
+            </p>
+            <a href="#products" class="animate__animated animate__bounceIn animate__delay-2s inline-block bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                ช้อปเลยตอนนี้
+            </a>
+        </div>
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl"></div>
+    </header>
+
+    <main id="products" class="max-w-7xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12 relative">
+            สินค้าแนะนำยอดฮิต
+            <span class="block w-16 h-1 bg-indigo-600 mx-auto mt-3 rounded-full"></span>
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md">
+                <div class="relative group overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=60" alt="Product 1" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-rose-500 text-white text-xs uppercase font-bold px-3 py-1 rounded-full">Hot</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">นาฬิกา Minimalist รุ่น Silver Edition</h3>
+                    <p class="text-gray-500 text-sm mb-4">นาฬิกาข้อมือดีไซน์เรียบหรู เหมาะสำหรับทุกโอกาสสำคัญของคุณ</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-indigo-600">฿2,490</span>
+                        <button onclick="openModal('นาฬิกา Minimalist รุ่น Silver Edition', '฿2,490', 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=60', 'นี่คือนาฬิกาที่ผสมผสานระหว่างความคลาสสิกและความร่วมสมัย ตัวเรือนทำจากสแตนเลสสตีลแท้ กันน้ำลึก 30 เมตร')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">
+                            ดูรายละเอียด
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md">
+                <div class="relative group overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60" alt="Product 2" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-indigo-500 text-white text-xs uppercase font-bold px-3 py-1 rounded-full">New</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">หูฟังไร้สาย Premium Sound-X</h3>
+                    <p class="text-gray-500 text-sm mb-4">ตัดเสียงรบกวนรอบข้างได้อย่างดีเยี่ยม เบสนุ่มฟังสบาย</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-indigo-600">฿4,900</span>
+                        <button onclick="openModal('หูฟังไร้สาย Premium Sound-X', '฿4,900', 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60', 'หูฟังบลูทูธครอบหูระดับไฮเอนด์ มาพร้อมระบบ Active Noise Cancelling แบตเตอรี่ใช้งานยาวนานต่อเนื่องสูงสุด 40 ชั่วโมง')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">
+                            ดูรายละเอียด
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md">
+                <div class="relative group overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60" alt="Product 3" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">รองเท้าผ้าใบสปอร์ต Air Run 2026</h3>
+                    <p class="text-gray-500 text-sm mb-4">รองเท้าวิ่งน้ำหนักเบา ซัพพอร์ตเท้าได้ดีเยี่ยมในทุกก้าว</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-indigo-600">฿3,200</span>
+                        <button onclick="openModal('รองเท้าผ้าใบสปอร์ต Air Run 2026', '฿3,200', 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60', 'รองเท้าผ้าใบที่ออกแบบมาเพื่อสรีระเท้าของคนเอเชียโดยเฉพาะ ถักทอด้วยเทคโนโลยีระบายอากาศ ไม่อับชื้น')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">
+                            ดูรายละเอียด
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="productModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="modalContent" class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl transform scale-90 transition-transform duration-300 relative">
+            
+            <button onclick="closeModal()" class="absolute top-4 right-4 bg-white/80 hover:bg-white text-gray-700 hover:text-black w-8 h-8 rounded-full flex items-center justify-center shadow-md transition duration-200 z-10 font-bold">✕</button>
+            
+            <img id="modalImg" src="" alt="" class="w-full h-64 object-cover">
+            <div class="p-8">
+                <h3 id="modalTitle" class="text-2xl font-bold mb-2">ชื่อสินค้า</h3>
+                <p id="modalPrice" class="text-xl font-bold text-indigo-600 mb-4">ราคา</p>
+                <p id="modalDesc" class="text-gray-600 text-sm leading-relaxed mb-6">รายละเอียดของสินค้าแบบยาว...</p>
+                <div class="flex space-x-4">
+                    <button onclick="alert('เพิ่มเข้าตะกร้าเรียบร้อย!')" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-xl transition duration-300 text-center shadow-lg hover:shadow-indigo-500/30">
+                        เพิ่มลงตะกร้า
+                    </button>
+                    <button onclick="closeModal()" class="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition duration-300">
+                        ยกเลิก
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('productModal');
+        const modalContent = document.getElementById('modalContent');
+
+        function openModal(title, price, imgSrc, desc) {
+            // ใส่ข้อมูลลงใน Modal
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalPrice').innerText = price;
+            document.getElementById('modalImg').src = imgSrc;
+            document.getElementById('modalDesc').innerText = desc;
+
+            // แสดง Modal ด้วยการเปลี่ยน class และเพิ่มอนิเมชันจาก Animate.css
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-90', 'animate__fadeOutDown');
+            modalContent.classList.add('scale-100', 'animate__animated', 'animate__zoomIn', 'animate__fast');
+        }
+
+        function closeModal() {
+            // เปลี่ยนอนิเมชันเป็นขาออก (Zoom Out หรือ Fade Out)
+            modalContent.classList.remove('animate__zoomIn');
+            modalContent.classList.add('animate__fadeOutDown');
+            
+            // รอให้อนิเมชันเล่นเสร็จก่อนแล้วค่อยซ่อนฉากหลัง
+            setTimeout(() => {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-90');
+            }, 300); // 300ms สอดคล้องกับเวลาของ CSS Transition
+        }
+
+        // ปิด Modal เมื่อคลิกพื้นที่ว่างรอบๆ กล่องข้อมูล
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
+<button onclick="location.href='indeex.html'">กลับไปหน้าแรก</button>
