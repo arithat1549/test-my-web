@@ -5,7 +5,7 @@
     <title> my profile</title>
     <style>
         body{
-            background-color : greenyellow;
+            background-color : green;
             color : white;
             font-family:  Arial;
             text-align: center;
@@ -44,7 +44,7 @@
 </head>
 <body>
     <div class="card">
-        <img src="https://cdn.discordapp.com/attachments/1131576517412007937/1506695747587018812/image.png?ex=6a0f3343&is=6a0de1c3&hm=53a503ae05228d8dbe13b407c8bc0a4eeb0ac8a35554a24858307ee9fc9dbf51&">
+        <img src="https://cdn.discordapp.com/attachments/1131576517412007937/1510308251840024747/image.png?ex=6a1c57ab&is=6a1b062b&hm=7367ef535944e1a7e3bdeba040cf79e5ac92f44138eecf940844477ffeb384f8&">
         <h1 id="name">dExter</h1>
         <p>อายุ 10 ปี</p>
         <p id="text">กำลังฝึกเขียนเว็บไซต์</p>
@@ -80,14 +80,13 @@
         }
     </script>
     <h2 id="hello">Hello</h2>
-    <button onclick="changeText()">เปลี่ยน
+    <button onclick="changeHello()">เปลี่ยนhello
     </button>
     <script>
-        function changeText(){
+        function changeHello(){
             document.getElementById("hello").innerHTML = "เปลี่ยนแล้ว"
         }
     </script>
-</html>
     <head>
         <title>popup Image</title>
         <style>
@@ -138,7 +137,7 @@
                             }
         </style>
     </head>
-    <body>
+    
         <button onclick="showPopup()">ทดสอบpopup</button>
         <div id="popup">
             <div class="popup-box">
@@ -278,6 +277,17 @@
 
             </tr>
               </table>
+              <script>
+                function darkMode(){
+                   if(document.body.style.background == "black"){
+                    document.body.style.background = "green";
+
+                }
+                else{
+                    document.body.style.background = "black"
+                }
+                }
+              </script>
               
     </body>
 </html>
